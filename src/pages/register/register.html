@@ -1,0 +1,65 @@
+
+<ion-header>
+  <ion-navbar class="block" color="personal">
+    <ion-title>
+     <span class="title"> FITTERACTIVO</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+<form [formGroup]="formularioRegistro" novalidate>
+
+      <div text-center margin> 
+        <img src="{{image}}" style="border-radius:50%;" height="auto"  width="50%"/>
+        <button ion-button icon-only clear color="gris" *ngIf="!image">
+            <ion-icon name="camera" ></ion-icon>  
+        </button>
+      
+      </div>
+
+      <ion-list class="regForm">
+
+          <ion-item class="registerdate">
+          <ion-input type="text"  placeholder="Nombre" formControlName="nombre"></ion-input>
+          </ion-item>
+        
+          <ion-item class="registerdate">
+            <ion-input type="number" placeholder="Edad" formControlName="edad"></ion-input>
+          </ion-item>
+          
+
+          <ion-item class="registerdate">
+            <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+          </ion-item>
+
+          <ion-item class="registerdate">
+            <ion-input type="password" placeholder="Contraseña" formControlName="pass"></ion-input>
+          </ion-item>
+
+          <ion-item class="registerdate">
+            <ion-input type="text" placeholder="Número de Telefono" formControlName="tel"></ion-input>
+          </ion-item>
+
+          <ion-item class="registerdate">
+
+            <ion-input type="number" min="30" placeholder="Peso (Kg)" formControlName="peso"></ion-input>
+          </ion-item>
+
+          <ion-item class="registerdate">
+            <ion-input type="number" min="20" placeholder="Altura (cm)" formControlName="altura"></ion-input>
+          </ion-item> 
+        </ion-list>
+  </form>
+</ion-content>
+
+<ion-footer>
+    
+      <button class="inicio" ion-button full no-margin icon-left icon-only color="primary" (click)="Tabs();">
+        <ion-icon name="person-add" ></ion-icon>  
+        Registrarme 
+      </button>
+    
+</ion-footer>
