@@ -14,7 +14,7 @@
 
       <div text-center margin> 
         <img src="{{image}}" style="border-radius:50%;" height="auto"  width="50%"/>
-        <button ion-button icon-only clear color="gris" *ngIf="!image">
+        <button ion-button icon-only clear color="gris" *ngIf="!image" (click)="escogerFoto();">
             <ion-icon name="camera" ></ion-icon>  
         </button>
       

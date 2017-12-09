@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-
-import {LoginPage} from '../login/login';
-import {RegisterPage} from '../register/register';
 import * as firebase from 'firebase';
 
 @Component({
@@ -16,18 +13,18 @@ export class HomePage {
   }
 
    login(){
-     this.navCtrl.push(LoginPage);
+     this.navCtrl.push("LoginPage");
    }
 
    register(){
-     this.navCtrl.push(RegisterPage);
+     this.navCtrl.push("RegisterPage");
    }
 
    RegistroGoogle(){
      const provider = new firebase.auth.GoogleAuthProvider();
       firebase.auth().signInWithPopup(provider).then(data=>{
           console.log(data);
-          this.navCtrl.push(RegisterPage,data.user);
+          this.navCtrl.push("RegisterPage",data.user);
       }).catch(error=>{
         console.log("Error", error);
       })

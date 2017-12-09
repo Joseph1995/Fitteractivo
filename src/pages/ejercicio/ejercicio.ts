@@ -2,26 +2,23 @@ import { Component, NgZone } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Events } from 'ionic-angular';
 
-
-/**
- * Generated class for the RankingPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
-  selector: 'page-ranking',
-  templateUrl: 'ranking.html',
+  selector: 'page-ejercicio',
+  templateUrl: 'ejercicio.html',
 })
-export class RankingPage {
+export class EjercicioPage {
+
+  ser: any;
+  rep: any;
+  ejercicio=[];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events, public ngZone: NgZone) { 
+    this.ejercicio = this.navParams.data.ejercicio;
+    console.log(this.ejercicio, "pagina ejercicio.ts");
+  }
   
-  ser:any;
-  rep:any;
 
-
-  constructor(public navCtrl: NavController, public navParams: NavParams,  public events: Events, public ngZone: NgZone) { }
 
   ngOnInit(){
     this.events.subscribe('getData',(series,repet)=>{
@@ -32,6 +29,5 @@ export class RankingPage {
        console.log('Series: ', series, ', Rep: ', repet);
     });
   }
-
 
 }

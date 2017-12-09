@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar class="block" color="personal">
+  <ion-navbar color="personal">
     <ion-title>
      <span class="title"> FITTERACTIVO</span>
     </ion-title>
@@ -8,11 +8,7 @@
 
 <ion-content> 
 
-<div class="register">
 
-    <button ion-button clear item-end class="registrarme" (click)="register();">Registrarme</button>
-    
-</div>
 
 
     <ion-list class="inputs">
@@ -27,17 +23,23 @@
           </ion-item>
 
           <button ion-button color="secondary" clear icon-only class="check">
-              <ion-icon name='checkbox-outline' is-active="false"></ion-icon>
+              <ion-icon name='checkbox' is-active="false"></ion-icon>
             </button>
 
     </ion-list>
 
-  <ion-footer>
-    <button class="inicio" ion-button full icon-left color="danger" (click)="RegistroGoogle()">
-        <ion-icon name="logo-googleplus" class="logo"></ion-icon>  
-        Registarme con Google 
-      </button>
-  </ion-footer>
 
 
 </ion-content>
+
+<ion-footer>
+    <button class="inicio" ion-button full icon-left color="danger" (click)="RegistroGoogle()">
+        <ion-icon name="logo-googleplus" class="logo"></ion-icon>  
+        Iniciar Sesión con Google 
+      </button>
+    <button class="inicio" ion-button full icon-left color="primary" (click)="register();">
+        <ion-icon name="person-add" class="logo"></ion-icon> 
+        Registrarme 
+    </button>       
+    
+</ion-footer>

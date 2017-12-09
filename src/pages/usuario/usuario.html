@@ -1,18 +1,71 @@
-<!--
-  Generated template for the UsuarioPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-  <ion-navbar class="block" color="personal">
+  <ion-navbar color="personal">
     <ion-title> <span class="title">Usuario</span></ion-title>
   </ion-navbar>
 
 </ion-header>
+<ion-content>
+  <ion-slides pager (ionSlideDidChange)="slideChanged()">
+      
+        <ion-slide>
+          <ion-card style="width:100% !important;margin-left:0px !important;box-shadow: none;" color="personal">
+                <ion-item color="personal">
+                    <img src="https://lh4.googleusercontent.com/-5hjerch9mVI/AAAAAAAAAAI/AAAAAAAAA10/kdh7LlrpKmo/photo.jpg">
+                </ion-item>             
+                <ion-card-content style="padding: 0em;">
+                      <ion-list >
+                              <ion-item color="personal">
+                                Edad
+                                <ion-icon name='ribbon' item-start></ion-icon>
+                                <ion-note item-end color="cc"><span style="font-size:2em;" >22</span></ion-note>
+                              </ion-item>
+                              <ion-item color="personal">
+                                  Peso
+                                  <ion-icon name='basket' item-start></ion-icon>
+                                  <ion-note item-end color="cc"><span style="font-size:2em;">75</span></ion-note>
+                                </ion-item>
+                                <ion-item color="personal">
+                                    Altura
+                                    <ion-icon name='body' item-start></ion-icon>
+                                    <ion-note item-end color="cc"><span style="font-size:2em;">167</span></ion-note>
+                                  </ion-item>
+                      </ion-list>        
 
+                  <ion-row>
+                      <ion-col>
+                          <button ion-button  icon-only clear (click)="connectBT()">
+                              <ion-icon name="bluetooth"></ion-icon>
+                            </button>
+                      </ion-col>
+                      <ion-col>
+                          <button ion-button icon-only clear (click)="confg()">
+                              <ion-icon name="cog"></ion-icon>
+                          </button>
+                      </ion-col>
+    
+                    </ion-row>
+                </ion-card-content>
+              
 
-<ion-content padding>
+              
+              </ion-card>
+        </ion-slide>
+  
+        
+        
+    <ion-slide >
+            <div class="obj">PROGRESO DEL OBJETIVO </div>
+            
+                  <ion-list no-border >
+                    <ion-item *ngFor="let d of objetivos; let i =index" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}"    color="gris">
+                      <ion-icon name='radio-button-on' item-start color={{d.color}}></ion-icon>
+                      {{d.titulo}}<ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>  
+                      <div *ngIf="isGroupShown(i)" class="desc">{{d.desc}}</div>
+                    </ion-item>
+                  </ion-list>
+        </ion-slide>
 
-</ion-content>
+   </ion-slides>
+
+  </ion-content>

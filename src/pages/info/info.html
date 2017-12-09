@@ -1,0 +1,46 @@
+<ion-header>
+
+  <ion-navbar class="block" color="personal">
+    <ion-title><span class="title">ENTRENO</span></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content  *ngFor="let ejer of ejercicio.entrenamiento">
+
+
+<div class="Titulo">
+{{ejer.nombre_ejercicio}}
+</div>
+<div class="video" *ngFor="let video of videos">
+    <iframe width="100%" height="300" [src]="video.video | youtube" frameborder="0" allowfullscreen></iframe>
+</div>
+<ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="guia">{{ejer.duracion}}<br><span class="indicador">Duración</span></div>
+      </ion-col>
+      <ion-col>
+        <div class="guia">40 seg <br><span class="indicador">Descanso</span></div>
+      </ion-col>
+      <ion-col>
+          <div class="guia">15 Kg<br><span class="indicador">Peso</span></div>
+        </ion-col>
+        <ion-col>
+            <div class="guia">{{ejer.repeticiones}}<br><span class="indicador">Repeticiones</span></div>
+        </ion-col>
+        <ion-col>
+            <div class="guia">{{ejer.series}}<br><span class="indicador">Series</span></div>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+<ion-footer>
+    
+      <button  ion-button full no-margin icon-left icon-only color="primary" (click)="Empezar()">
+        <ion-icon name="play" ></ion-icon>  
+        EMPEZAR 
+      </button>
+    
+</ion-footer>

@@ -1,0 +1,24 @@
+<ion-card style="width:100% !important;margin-left:0px !important;">
+  <ion-card-header (click)="toggleAccordion()">
+    <ion-list >
+      <ion-item color="cd">
+          <ion-note item-end>
+              {{valor}}
+            </ion-note>
+        <button ion-button clear small icon-only item-right>
+          <ion-icon color="cc" [name]= "icon"></ion-icon>
+        </button>
+        <button ion-button clear small icon-only item-left>
+            <ion-icon color={{color}} name= "radio-button-on"></ion-icon>
+          </button>
+        {{title}}
+
+     </ion-item>
+    </ion-list>
+  </ion-card-header>
+  <ion-card-content #cc>
+    <ng-content>
+
+    </ng-content>
+  </ion-card-content>
+</ion-card>

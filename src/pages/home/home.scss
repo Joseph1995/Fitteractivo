@@ -20,11 +20,7 @@ page-home{
     font-size: 2em;
     height: 40px;
     }
-    .container{
-        background-color:dimgray;
-    }
     .inicio{
-      
         font-family: 'Palitoon';
         font-size: 20px;
     }
@@ -32,17 +28,12 @@ page-home{
         font-size: 32px;
         margin-top: 0.8em;
         font-family: 'Bebas Neue';
+        text-align: center;
     }
     .sesion{
         text-align: center;
         font-family: 'Palitoon';
         font-size: 3em;
-    }
-    .block{
-        height: 6em;
-        text-align: center;
-        vertical-align: middle;
-        border-bottom :2px solid #488aff;
     }
     .inputs{
         width: 80%;
@@ -52,7 +43,7 @@ page-home{
     
     }
     .check{
-        margin-left: 13em;
+        margin-left: 16em;
     }
     
 }

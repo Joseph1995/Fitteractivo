@@ -1,6 +1,17 @@
-.obj{
+page-objetivos{
+    .obj{
     text-align: center;
     font-family: 'Palitoon';
     font-size: 2em;
     margin-bottom: 1em;
+    }
+    .title{
+        font-size: 32px;
+        margin-top: 0.8em;
+        font-family: 'Bebas Neue';
+        text-align: center;
+    }
+    .scroll-content{
+        background-color: #E2E2E2;
+    }
 }

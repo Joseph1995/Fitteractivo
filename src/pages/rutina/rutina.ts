@@ -1,25 +1,30 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the RutinaPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController } from 'ionic-angular';
+import { RemoteApiProvider } from '../../providers/remote-api/remote-api';
 
 @IonicPage()
 @Component({
   selector: 'page-rutina',
   templateUrl: 'rutina.html',
 })
-export class RutinaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+export class RutinaPage {
+  items=[];
+
+  
+
+  constructor(public navCtrl: NavController, private remote : RemoteApiProvider) {
+    
+    this.getRutina();
+     
+  }
+  
+  InfoRutina (item){
+    this.navCtrl.push("EntrenoPage",{item:item});
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RutinaPage');
+  getRutina(){
+    this.remote.getData().subscribe (data => this.items= data);
   }
 
 }

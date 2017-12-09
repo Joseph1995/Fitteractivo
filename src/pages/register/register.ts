@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
-import {TabsPage} from '../tabs/tabs';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
-import { Camera, CameraOptions } from '@ionic-native/camera';
+import { Camera } from '@ionic-native/camera';
 
 @IonicPage()
 @Component({
@@ -16,7 +15,7 @@ export class RegisterPage {
 
   formularioRegistro: FormGroup;
   image:string="";
-
+  userData = [];
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams, 
@@ -38,7 +37,7 @@ export class RegisterPage {
     });
 
     this.setvalues();
-
+    this.getData(this.image);
 
   }
  
@@ -48,8 +47,17 @@ export class RegisterPage {
       this.formularioRegistro.get('nombre').setValue(googleData.displayName);
       this.formularioRegistro.get('email').setValue(googleData.email);
       this.image=googleData.photoURL;           
-      
+      this.getData(this.image);
     }
+  }
+
+  getData(image){
+      const nom= this.formularioRegistro.get('nombre');
+      const ed= this.formularioRegistro.get('edad');
+      const pes= this.formularioRegistro.get('peso');
+      const alt= this.formularioRegistro.get('altura');
+      const photo = image;
+     this.userData= [nom,ed,pes,alt,image];
   }
 
   escogerFoto(){
@@ -94,12 +102,9 @@ export class RegisterPage {
 
   }
 
-  // completeForm() {
-  //   this.provider.signUp(this.formularioRegistro.value);
-  // }
 
   Tabs(){
-    this.navCtrl.setRoot(TabsPage);
+    this.navCtrl.setRoot("TabsPage",this.userData)
   }
 
 }

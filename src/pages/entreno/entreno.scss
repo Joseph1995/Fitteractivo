@@ -1,3 +1,41 @@
 page-entreno {
-
+    font-family: 'Palitoon'; 
+    .scroll-content{
+        background-color: #E2E2E2;
+    }  
+    
+    .title{
+        font-size: 32px;
+        margin-top: 0.8em;
+        font-family: 'Bebas Neue';
+    }
+    .block{
+        height: 6em;
+        text-align: center;
+        vertical-align: middle;
+        border-bottom :2px solid #488aff;
+    }
+    .itemtitle{
+        font-size: 25px;
+        color: gray;
+        text-decoration: underline; 
+    }
+    .dia{
+        margin-left: 5px;
+        color: blue;
+        font-size: 25px;
+    }
+    .etapa{
+        margin-left: 5px;
+        color: skyblue;
+        font-size: 30px;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+    .ejercicio{
+        height: 0.4em;
+        margin-bottom: -1em;
+        border-top: 0 !important;
+        border-bottom: 0 !important;
+    }
 }

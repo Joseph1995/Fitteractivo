@@ -1,8 +1,32 @@
 page-rutina{
-    font-family: 'Palitoon';
-}
-.semana{
-    background-color: dimgray;
-    width: 30%;
-    font-size: 2em;
+    font-family: 'Palitoon'; 
+    .scroll-content{
+        background-color: #E2E2E2;
+    }  
+    .semana{
+        background-color: dimgray;
+        width: 35%;
+        font-size: 2em;
+        color: white;
+        margin-top: 25px;
+        border-radius: 0em 5% 5% 0em ;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+    .title{
+        font-size: 32px;
+        margin-top: 0.8em;
+        font-family: 'Bebas Neue';
+        text-align: center;
+    }
+    .dia{
+        margin-left: 5px;
+        color: skyblue;
+        font-size: 20px;
+    }
+    .rutina{
+        height: 0.4em;
+        border-bottom: 0 !important;
+    }
+
 }

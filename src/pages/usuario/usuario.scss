@@ -1,9 +1,31 @@
 page-usuario {
+    .scroll-content{
+        background-color: #E2E2E2;
+    }
+    img{
+        width: 80% !important;
+        height: 80% !important;
+        margin-left: 2em;
+        border-radius: 50%;
 
-}
-.block{
-    height: 6em;
-    text-align: center;
-    vertical-align: middle;
-    border-bottom :2px solid #488aff;
+    }
+    .atributos{
+      margin-right: 1em;
+    }
+     .title{
+        font-size: 32px;
+        margin-top: 0.8em;
+        font-family: 'Bebas Neue';
+        text-align: center;
+    }
+
+    .desc{
+        font-size: 14px;
+    }
+    .obj{
+        text-align: center;
+        font-family: 'Palitoon';
+        font-size: 2em;
+
+    }
 }
